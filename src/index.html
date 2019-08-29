@@ -4,15 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Front End Web 100</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <h1>Front End Web 100 Starter</h1>
-        <h2>Progressive ITU</h2>
+    <header class="page-header">
+        <h1>Tip Calculator</h1>
     </header>
     <main>
-        
+        <div class="container">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="tip10" class="tip" autocomplete="off" checked>10%
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="tip15" class="tip" autocomplete="off">15%
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="tip20" class="tip" autocomplete="off">20%
+                </label>
+            </div>
+            <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                <input class="form-control" type="number" id="billAmount">
+            </div>
+            <div>
+                <h3>Your tip amount is: <span id="tipAmount"></span></h3>
+            </div>
+        </div>
     </main>
 </body>
 
