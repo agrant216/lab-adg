@@ -4,36 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Front End Web 100</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 </head>
 
 <body>
-    <header class="page-header">
-        <h1>Tip Calculator</h1>
+    <header>
     </header>
     <main>
         <div class="container">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group">
-                <label class="btn btn-secondary active">
-                    <input type="radio" name="options" id="tip10" class="tip" autocomplete="off" checked>10%
-                </label>
-                <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="tip15" class="tip" autocomplete="off">15%
-                </label>
-                <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="tip20" class="tip" autocomplete="off">20%
-                </label>
+            <div class="page-header">
+                <h1>Tip Calculator</h1>
             </div>
             <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">$</span>
-                    </div>
-                <input class="form-control" type="number" id="billAmount">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input class="form-control"
+                       type="number"
+                       id="billAmount">
+            </div>
+            <div class="btn-group btn-group-toggle"
+                 data-toggle="buttons"
+                 role="group">
+                <label class="btn btn-secondary tipLabel">
+                    <input type="radio"
+                           name="options"
+                           id="tip10"
+                           class="tip"
+                           value="10%"
+                           autocomplete="off">10%
+                </label>
+                <label class="btn btn-secondary tipLabel active">
+                    <input type="radio"
+                           name="options"
+                           id="tip15"
+                           class="tip"
+                           value="15%"
+                           autocomplete="off">15%
+                </label>
+                <label class="btn btn-secondary tipLabel">
+                    <input type="radio"
+                           name="options"
+                           id="tip20"
+                           class="tip"
+                           value="20%"
+                           autocomplete="off">20%
+                </label>
             </div>
             <div>
-                <h3>Your tip amount is: <span id="tipAmount"></span></h3>
+                <p>You are tipping <span id="tipPercentHelper"></span></p>
             </div>
+            <ul class="list-group">
+                <li class="list-group-item">Bill Amount: <span id="list_BillAmount"></span></li>
+                <li class="list-group-item">Tip Percentage: <span id="list_TipPercent"></span></li>
+                <li class="list-group-item">Amount of tip: <span id="list_TipAmount"></span></li>
+                <li class="list-group-item"><i>Total to be Paid: <span id="list_Total"></span></i></li>
+            </ul>
         </div>
     </main>
 </body>
